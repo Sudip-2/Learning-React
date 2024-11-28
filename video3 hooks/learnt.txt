@@ -1,0 +1,34 @@
+ React handles state updates with useState. React batches state updates for performance reasons, so multiple calls to setCounter within the same function will not immediately update the state. Instead, they will use the same value of counter from the initial render.
+
+ In React, state refers to an object that holds dynamic data or information about a component. It allows components to react and re-render when the data changes
+
+Reconcilation
+ Reconciliation in React is the process of updating the user interface (UI) efficiently when the state or props of a component change. React uses a virtual DOM to compare the new and previous versions of the UI, identifying the minimum number of changes needed and applying those changes to the real DOM.
+
+Key Concepts of Reconciliation:
+Virtual DOM:
+
+React maintains a lightweight in-memory representation of the real DOM, called the virtual DOM.
+When state or props change, React creates a new virtual DOM tree representing the updated UI.
+
+Diffing Algorithm:
+
+React compares the previous and new virtual DOM trees to determine what has changed.
+Instead of re-rendering the entire UI, React identifies specific elements or components that have been updated and applies changes only to those parts.
+
+ React Fibre
+React Fiber is the reconciliation engine introduced in React 16. It is a complete reimplementation of React's core algorithm to enable incremental rendering and improve the performance of complex applications. Fiber was designed to make React more efficient and capable of handling advanced features like animations, gestures, and smooth updates.
+
+Key Features of React Fiber:
+Incremental Rendering:
+
+Fiber breaks rendering work into small units (chunks) that can be paused and resumed. This prevents the app from freezing or becoming unresponsive during heavy updates.
+Prioritization:
+
+Fiber assigns priorities to different updates. High-priority tasks like animations or user input are handled first, while less important tasks like updating the UI in the background can wait.
+Concurrency:
+
+React Fiber enables concurrent rendering, allowing React to work on multiple tasks simultaneously. This ensures that the UI remains responsive even when updates take time.
+Improved Reconciliation:
+
+Fiber improves the diffing process, allowing React to update the UI more efficiently. It supports features like error boundaries and better server-side rendering.

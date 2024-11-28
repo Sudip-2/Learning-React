@@ -1,0 +1,9 @@
+Disected a react folder 
+in react js func or components you cannot return more than one element so everyone wraps around multiple element in one div then fragments are created <></>
+
+react converts jsx into js object using React.createElement then takes into virtual dom to then real dom then it shows html
+
+jsx is used for ui in descriptive way its basically HTML-Like Syntax in JavaScript
+
+
+jsx can take expression like 2+2 not control statement if else etc
