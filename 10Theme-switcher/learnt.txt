@@ -1,0 +1,7 @@
+useContext(context)
+is a React hook that allows you to access the current value of a context
+
+createContext():
+This is a function from React that creates a Context object(store in redux). 
+A Context in React is used for passing data through the component tree it's like a global object from wherever we can access it .
+without having to pass props manually at every level.
